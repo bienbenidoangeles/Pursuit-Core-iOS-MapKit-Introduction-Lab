@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		F134A30724053E280080588E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F134A30624053E280080588E /* Assets.xcassets */; };
 		F134A30A24053E280080588E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F134A30824053E280080588E /* LaunchScreen.storyboard */; };
 		F134A31524053E280080588E /* Pursuit_Core_iOS_MapKit_Introduction_LabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F134A31424053E280080588E /* Pursuit_Core_iOS_MapKit_Introduction_LabTests.swift */; };
+		F134A3202405409E0080588E /* SchoolsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F134A31F2405409E0080588E /* SchoolsAPIClient.swift */; };
+		F134A323240540D10080588E /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = F134A322240540D10080588E /* ImageKit */; };
+		F134A325240541410080588E /* School Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F134A324240541410080588E /* School Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,8 @@
 		F134A31024053E280080588E /* Pursuit-Core-iOS-MapKit-Introduction-LabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pursuit-Core-iOS-MapKit-Introduction-LabTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F134A31424053E280080588E /* Pursuit_Core_iOS_MapKit_Introduction_LabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pursuit_Core_iOS_MapKit_Introduction_LabTests.swift; sourceTree = "<group>"; };
 		F134A31624053E280080588E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F134A31F2405409E0080588E /* SchoolsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsAPIClient.swift; sourceTree = "<group>"; };
+		F134A324240541410080588E /* School Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "School Model.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F134A323240540D10080588E /* ImageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +92,8 @@
 				F134A30624053E280080588E /* Assets.xcassets */,
 				F134A30824053E280080588E /* LaunchScreen.storyboard */,
 				F134A30B24053E280080588E /* Info.plist */,
+				F134A31F2405409E0080588E /* SchoolsAPIClient.swift */,
+				F134A324240541410080588E /* School Model.swift */,
 			);
 			path = "Pursuit-Core-iOS-MapKit-Introduction-Lab";
 			sourceTree = "<group>";
@@ -115,6 +123,9 @@
 			dependencies = (
 			);
 			name = "Pursuit-Core-iOS-MapKit-Introduction-Lab";
+			packageProductDependencies = (
+				F134A322240540D10080588E /* ImageKit */,
+			);
 			productName = "Pursuit-Core-iOS-MapKit-Introduction-Lab";
 			productReference = F134A2FA24053E240080588E /* Pursuit-Core-iOS-MapKit-Introduction-Lab.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +176,9 @@
 				Base,
 			);
 			mainGroup = F134A2F124053E240080588E;
+			packageReferences = (
+				F134A321240540D10080588E /* XCRemoteSwiftPackageReference "ImageKit" */,
+			);
 			productRefGroup = F134A2FB24053E240080588E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -201,7 +215,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F134A30224053E240080588E /* ViewController.swift in Sources */,
+				F134A3202405409E0080588E /* SchoolsAPIClient.swift in Sources */,
 				F134A2FE24053E240080588E /* AppDelegate.swift in Sources */,
+				F134A325240541410080588E /* School Model.swift in Sources */,
 				F134A30024053E240080588E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,6 +485,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F134A321240540D10080588E /* XCRemoteSwiftPackageReference "ImageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/ImageKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F134A322240540D10080588E /* ImageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F134A321240540D10080588E /* XCRemoteSwiftPackageReference "ImageKit" */;
+			productName = ImageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F134A2F224053E240080588E /* Project object */;
 }
