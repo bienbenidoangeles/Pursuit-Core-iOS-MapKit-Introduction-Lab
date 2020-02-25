@@ -17,10 +17,13 @@ class ViewController: UIViewController {
     
     private var isShowingNewAnnotations = false
     
+    private let locationSession = CoreLocationSession()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadSchools()
         mapView.delegate = self
+        mapView.showsUserLocation = true
     }
 
     private func loadSchools(){

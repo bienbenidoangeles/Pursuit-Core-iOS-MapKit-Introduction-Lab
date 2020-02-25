@@ -24,3 +24,30 @@ struct School: Codable {
         case longitude
     }
 }
+
+class CoreLocationSession: NSObject {
+  
+  public var locationManager: CLLocationManager
+  
+  override init() {
+    locationManager = CLLocationManager()
+    super.init()
+    
+    // request the user's location
+    locationManager.requestAlwaysAuthorization()
+    locationManager.requestWhenInUseAuthorization()
+    
+    startSignificantLocationChanges()
+    
+  }
+  
+  private func startSignificantLocationChanges() {
+    if !CLLocationManager.significantLocationChangeMonitoringAvailable() {
+      // not available on the device
+      return
+    }
+    // less aggresive that the startUpdatingLocation() in GPS monitor chanages
+    locationManager.startMonitoringSignificantLocationChanges()
+  }
+
+}
